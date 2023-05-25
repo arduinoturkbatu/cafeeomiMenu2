@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caf&eacute;&eacute; Omi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+        @font-face {
+            font-family: NotoColorEmojiLimited;
+            unicode-range: U+1F1E6-1F1FF;
+            src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: NotoColorEmojiLimited,'Manrope', sans-serif;
+            overflow: hidden;
+        }
+
+        .swiper {
+            width: auto;
+            height: 100vh;
+        }
+
+        .swiper-slide {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 9 / 16;
+        }
+
+        .swiper-slide img {
+            aspect-ratio: 9 / 16;
+            height: calc(100vh - 2em) !important;
+        }
+
+        button {
+            width: 2em;
+            height: 2em;
+            background-color: rebeccapurple;
+            color: #fff;
+            font-size: 1.2em;
+            border-radius: 50%;
+            border: none;
+            position: absolute;
+            right: 7px;
+            top: 5px;
+            cursor: pointer;
+            z-index: 50;
+        }
+
+        dialog {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            width: 80%;
+        }
+
+        dialog button {
+            position: absolute;
+            right: 0.5em;
+            top: 0.5em;
+            transform: translate(0,0);
+        }
+
+        dialog > div {
+            background-color: white;
+            border: 2px solid black;
+            padding: 2em;
+        }
+
+        body > img {
+            position: absolute;
+            top: 6px;
+            left: 8px;
+            width: 4em;
+            height: 4em;
+            border-radius: 30px;
+            box-shadow: 5px 5px 50px 2px rgba(0 0 0 / 25%);
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="assets/207176472_111042661226916_4344902203757513372_n.jpg" alt="">
+
+    <button onclick="document.querySelector('dialog').showModal()">&quest;</button>
+
+    <dialog>
+        <button onclick="document.querySelector('dialog').close()">&times;</button>
+        <div>
+            <h3 style="margin:0;padding:0;text-align: center;">YARDIM / HELP / ДОПОМОГА / ПОМОЩЬ / HILFE</h3>
+            🇹🇷 Menüleri sağa veya sola kaydırarak ya da oklara tıklayarak sayfalar arası geçiş yapabilirsin.
+            <hr/>
+            🇬🇧 You can change pages of the menu by dragging to the right or left, or clicking on the arrows.
+            <hr/>
+            🇺🇦 Ви можете перемикатися між сторінками, проводячи меню ліворуч або праворуч або натискаючи стрілки.
+            <hr/>
+            🇷🇺 Вы можете переключаться между страницами, проводя меню влево или вправо или нажимая стрелки.
+            <hr/>
+            🇩🇪 Sie können zwischen den Seiten wechseln, indem Sie in den Menüs nach links oder rechts wischen oder auf die Pfeile klicken.
+        </div>
+    </dialog>
+
+    <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="assets/1.png"></div>
+      <div class="swiper-slide"><img src="assets/2.png"></div>
+      <!--div class="swiper-slide"><img src="assets/3.jpg"></div>
+      <div class="swiper-slide"><img src="assets/4.jpg"></div>
+      <div class="swiper-slide"><img src="assets/5.jpg"></div>
+      <div class="swiper-slide"><img src="assets/6.jpg"></div>
+      <div class="swiper-slide"><img src="assets/7.jpg"></div>
+      <div class="swiper-slide"><img src="assets/8.jpg"></div>
+      <div class="swiper-slide"><img src="assets/9.jpg"></div>
+      <div class="swiper-slide"><img src="assets/10.jpg"></div>
+      <div class="swiper-slide"><img src="assets/11.jpg"></div>
+      <div-- class="swiper-slide"><img src="assets/12.jpg"></div-->
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
+</body>
+</html>
